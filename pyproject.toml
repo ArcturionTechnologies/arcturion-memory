@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arcturion-memory"
+version = "0.1.0"
+description = "Audit, dedupe, health-check, index and search AI-agent memory files"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Arcturion Technologies"}]
+
+[project.optional-dependencies]
+semantic = ["sentence-transformers"]
+
+[project.scripts]
+arcturion-memory = "arcturion_memory.__main__:main"
+
+[tool.setuptools]
+packages = ["arcturion_memory"]

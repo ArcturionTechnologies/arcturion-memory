@@ -1,0 +1,18 @@
+{
+  "agents_root": "agents",
+  "agents": ["builder", "researcher"],
+  "inner_glob": null,
+  "memory_dirname": "Memory",
+  "harness_globs": [],
+  "read_only_prefixes": [],
+  "dedup_skip_prefixes": [],
+  "load_bearing_filenames": ["^feedback_.*\\.md$", "^(decision|adr)-.*\\.md$", "^runbook-.*\\.md$"],
+  "extra_owner_agents": ["shared", "unknown"],
+  "domain_owners": [
+    {"pattern": "\\b(deploy|ci|pipeline|build)\\b", "owner": "builder"},
+    {"pattern": "\\b(paper|citation|survey|dataset)\\b", "owner": "researcher"}
+  ],
+  "recall_index_files": ["agents/builder/Memory/MEMORY.md", "agents/researcher/Memory/MEMORY.md"],
+  "ttl_by_type": {"scratch": 7},
+  "grace_days": 30
+}
