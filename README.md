@@ -26,6 +26,9 @@ Python 3.10+, standard library only. `dedup` can optionally use
 
 ## Quickstart
 
+The final `index` command changes the bundled example files in your checkout.
+Omit it to keep the example read-only; `--dry-run` previews the change.
+
 ```bash
 git clone https://github.com/ArcturionTechnologies/arcturion-memory.git
 cd arcturion-memory
